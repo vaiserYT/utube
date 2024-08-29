@@ -1,0 +1,4 @@
+django
+django-restframework
+django-cors-headers
+psycopg2

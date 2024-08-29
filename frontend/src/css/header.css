@@ -1,0 +1,11 @@
+a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
