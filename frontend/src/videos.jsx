@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import "./css/videos.css"
 import { Button } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import AddVideo from './components/addVideo';
 
 function Videos() {
   const [data, setData] = useState([])
@@ -18,6 +21,7 @@ function Videos() {
         console.error('Error fetching data:', error);
       }
     }
+    
 
     fetchData();
 
@@ -25,17 +29,27 @@ function Videos() {
 
     return () => clearInterval(intervalId);
   }, [])
-  return (
-    <div>
-      {data.map((item) => ( 
-        <div key={item.id} className='video'>
-          <h2>{item.title}</h2>
-          <p>{item.description}</p>
-          <a href={`/watch/video/${item.id}`} className="button_watch"><Button variant='warning'>Смотреть видео!</Button></a>
-        </div>
-      ))}
-    </div>
-  )
+  if (data.length <= 0 ) {
+    return <div className='notFound'>Пока что видео нет!</div>;;
+  }
+  else{
+    return (
+      <div>
+        {data.map((item) => ( 
+          
+          <div key={item.id} className='video'>
+            <h2 className='title'>{item.title}</h2>
+            <p className='description'>{item.description}</p>
+            <div className='video-likes'><FontAwesomeIcon icon={faThumbsUp}/>{item.likes}</div>
+            <div className='video-dislikes'><FontAwesomeIcon icon={faThumbsDown}/>{item.unlikes}</div>
+            <a href={`/watch/video/${item.id}`} className="button_watch"><Button variant='warning'>Смотреть видео!</Button></a>
+          </div>
+        ))}
+      </div>
+    )
+  }
+  
+  
 }
 
 export default Videos

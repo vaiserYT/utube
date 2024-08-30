@@ -9,6 +9,7 @@ import {
 import App from "./App.jsx";
 import "./css/main.css";
 import Watch from "./Watch.jsx";
+import AddVideo from "./components/addVideo.jsx";
 
 
 const router = createBrowserRouter([
@@ -19,7 +20,12 @@ const router = createBrowserRouter([
   {    
     path: "/watch/video/:id",
     element: <Watch />,
+  },
+  {    
+    path: "/create_video",
+    element: <AddVideo />,
   }
+
 ]);
 
 

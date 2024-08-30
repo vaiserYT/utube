@@ -6,5 +6,77 @@ video {
     border-radius: 10px;
     margin-left: 20px;
 }
+.video_date, .video_title {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 50%;
 
-h2, p {margin-left: 20px;}
+}
+
+.video_description {
+    display: block;
+    margin-left: 20px;
+    max-width: 60%;
+}
+
+.watch_video {
+    display: block;
+    width: 60%;
+    margin-left: 20px;
+    
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.likes, .dislikes {
+    display: inline-block;
+    margin-left: 20px;
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-size: 30px;
+    transition: transform 500ms ease;
+}
+
+.likes {
+    margin-left: 50%;
+    
+}
+
+.likes:hover, .dislikes:hover {
+    transform: scale(1.1);
+}
+
+ h2 {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    width: 60%;
+    height: 50%;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+.comment {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    width: 60%;
+    height: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.comment p, span {
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+
+.add-comment-form{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.create_comment, .comment-form {
+    display: inline-flex;
+}

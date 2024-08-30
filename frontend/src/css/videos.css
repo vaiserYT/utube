@@ -9,9 +9,10 @@ div .video{
     white-space: nowrap;
     
     
+    
     background-color: rgba(255, 255, 255, 0.2);
     width: 12%;
-    height: 10%;
+    height: 20%;
     border: 2px solid rgba(255, 255, 255, 0.3);
     padding-left: 5px;
     border-radius: 15px;
@@ -25,4 +26,56 @@ div .video:hover {
 .button_watch {
     display: inline-block;
     margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+div .notFound{
+    display: inline-block;
+    margin-top: 200px;
+    margin-left: 40%;
+    font-size: 50px;
+    color: red;
+    font-weight: 700;
+    text-shadow: 0 0 30px rgba(94, 28, 28, 0.9);
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+ 
+.title, .description {
+    margin-left: 0px !important;
+    margin-bottom: 4px !important;
+} 
+
+.title{
+    font-size: 15px !important;
+}
+
+.video-likes, .video-dislikes {
+    margin-left: 0px;
+    /* margin-bottom: 20px; */
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.add-video-form {
+    margin-left: 25%;
+    margin-top: 10px;
+    width: 50%;
+}
+.add-video-form .create_video {
+    margin-top: 10px;
+    margin-left: 42% !important;
+    transition: transform 500ms ease;
+}
+
+.add-video-form .create_video:hover {
+    transform: scale(1.1);
+}
+
+.check-form {
+    color: red;
 }
